@@ -31,12 +31,7 @@ pipeline {
             }
 
         }
-        stage('nexus'){
-            steps {
-                nexusArtifactUploader artifacts: [[artifactId: 'vprofile', classifier: '', file: 'target/test-repo-v1.war', type: 'war']], credentialsId: 'c217ec9d-cd56-47e9-aa73-ebc19fa47339', groupId: 'com.visualpathit', nexusUrl: '18.220.149.146:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'test-repo', version: 'v1'
-            }
-
-        }
+        
     }
 }
 
