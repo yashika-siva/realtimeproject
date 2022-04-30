@@ -31,6 +31,12 @@ pipeline {
             }
 
         }
+        stage('deploy to container'){
+            steps {
+                sh "curl -v -u sivaparvathi:Yashika@09 -T /var/lib/jenkins/workspace/job1/target/vprofile-v1.war 'http://18.222.225.193:4000/manager/text/deploy?path=/maven'"
+            }
+
+        }
         
     }
 }
