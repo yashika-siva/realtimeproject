@@ -4,7 +4,7 @@ pipeline {
     stages{
         stage('fetch code') {
           steps{
-             git credentialsId: '5d71a719-f75f-41ca-9da3-8a558a356e29', url: 'git@github.com:yashika-siva/realtimeproject.git'
+             git credentialsId: 'github credentials', url: 'https://github.com/yashika-siva/realtimeproject.git'
           }  
         }
 
